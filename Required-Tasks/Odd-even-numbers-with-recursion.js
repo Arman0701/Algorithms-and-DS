@@ -7,11 +7,9 @@ function onlyEven(number){
       number = String(number);
    }
    if (number.length !== 0){
-      for (let i=0; i<number.length; i++){
-         if (number[0] % 2 === 0) return false;
-         number = number.slice(1)
-         onlyEven(number);
-      } 
+      if (number[0] % 2 === 0) return false;
+      number = number.slice(1);
+      onlyEven(number);
    }
    return true;
 }
