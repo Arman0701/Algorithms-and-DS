@@ -7,7 +7,7 @@
 function sumDigits(value, sum = 0){
     if (! Array.isArray(value)) value = value.toString().split('').map(elem => +elem);
     if (! value.length) {
-        if (sum.toString().length === 1 && sum !== 0) return sum;
+        if (sum.toString().length === 1) return sum;
         return sumDigits(sum);
     }
     sum += value.pop();
